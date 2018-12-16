@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>GameRuby</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Game Word</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <style type="text/css">
+    body {
+      padding-top: 5rem;
+    }
+    .content {
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+  </style>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+<div class="row">
+  <%= render 'layouts/navbar' %>
+</div>
+<div class="container-fluid">
+  <div class="row content">
+      <%= yield %>
+  </div>
+</div>
+</body>
 </html>

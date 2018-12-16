@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirement
+* Install MySQL / MariaDB on port 3306 and setup your configuration on /config/database.yml
+```
+  username: root
+  password:
+```
 
-Things you may want to cover:
+## Installation
+```
+  rake db:create
+  rake db:migrate
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Run
+```
+  rails s
+```
+ Open browser http://localhost:3000 <br>
+ You can add Vocabulary http://localhost:3000/vocabularies
+ 
+ ## Creator
+ Angga Dwi Hariadi
