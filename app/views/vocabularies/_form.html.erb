@@ -1,0 +1,27 @@
+<div class="col-md-6 col-lg-12">
+  <%= form_with(model: vocabulary, local: true) do |form| %>
+    <% if vocabulary.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(vocabulary.errors.count, "error") %> prohibited this vocabulary from being saved:</h2>
+
+        <ul>
+          <% vocabulary.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field form-group row">
+      <label for="vocabulary_word" class="col-sm-2 col-form-label">Word</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="vocabulary[word]" id="vocabulary_word" placeholder="Word" value="<%= @vocabulary.word %>" required>
+      </div>
+    </div>
+
+    <div class="actions">
+      <input type="submit" class="btn btn-success" name="commit" value="Submit" data-disable-with="Submit" />
+    </div>
+  <% end %>
+  </div>
+</div>
