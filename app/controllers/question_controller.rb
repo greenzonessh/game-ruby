@@ -1,15 +1,15 @@
 class QuestionController < ApplicationController
   def index
-    if Vocabulary.where(:is_active => true).count() > 1
-      @notice = "You have #{Vocabulary.where(:is_active => true).count()} Question"
+    if Vocabulary.where(:is_active => true).count() >= 1
+      @notices = "You have #{Vocabulary.where(:is_active => true).count()} Question"
     else
-      @notice = "Please, Add Vocabulary"
+      @notices = "Please, Add Vocabulary"
     end
   end
 
   def play
     if Vocabulary.where(:is_active => true).count() < 1
-      @notice = "Please, Add Vocabulary"
+      @notices = "Please, Add Vocabulary"
       redirect_to question_index_url
     end
 
