@@ -1,16 +1,16 @@
 <div class="col-sm-12 col-md-12 col-lg-12">
-  <%= form_tag(question_sumscore_url, method: "POST") do %>
+  <%= form_tag(scores_url, method: "POST") do %>
     <div class="form-group row">
-      <label for="inputPassword" class="col-sm-2 col-form-label">Your Name</label>
+      <label for="inputName" class="col-sm-2 col-form-label">Your Name</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" name="name" id="inputPassword" placeholder="">
+        <input type="text" class="form-control" name="name" placeholder="" required>
       </div>
     </div>
     <% @vocabularies.each do |vocabulary| %>
       <div class="form-group row">
-        <label for="inputPassword" class="col-sm-2 col-form-label"><%= vocabulary.word.chars.shuffle.join %></label>
+        <label for="inputS" class="col-sm-2 col-form-label"><%= vocabulary.word.chars.shuffle.join %></label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" name="vocab-<%= vocabulary.id %>" id="inputPassword" placeholder="">
+          <input type="text" class="form-control" name="vocab-<%= vocabulary.id %>" required>
         </div>
       </div>
     <% end %>

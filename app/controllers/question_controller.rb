@@ -15,20 +15,4 @@ class QuestionController < ApplicationController
 
     @vocabularies = Vocabulary.where(:is_active => true)
   end
-
-  def sumscore
-    @point = 0
-    params.each do |key, value|
-      if key[0..4] == "vocab"
-        @vocabulary = Vocabulary.find(key[6..-1])
-        if @vocabulary != nil
-          if value == @vocabulary.word
-            @point += 1
-          end
-        end
-      end
-    end
-    puts "Your name : #{params[:name]}"
-    puts "Your point : #{@point}"
-  end
 end
