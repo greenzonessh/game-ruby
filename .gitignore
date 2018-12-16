@@ -25,3 +25,11 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/game-ruby.iml
+.idea/encodings.xml
+.idea/.rakeTasks
+.idea/.generators
